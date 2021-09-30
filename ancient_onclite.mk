@@ -12,15 +12,24 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Inherit from onclite device
 $(call inherit-product, device/xiaomi/onclite/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common AncientOS stuff.
+$(call inherit-product, vendor/ancient/config/common_full_phone.mk)
+
+#Boot animation
+TARGET_BOOT_ANIMATION_RES := 720
+
+#Gapps
+TARGET_GAPPS_ARCH := arm64
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+ANCIENT_NOGAPPS=true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_onclite
+PRODUCT_NAME := ancient_onclite
 PRODUCT_DEVICE := onclite
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 7
 PRODUCT_MANUFACTURER := Xiaomi
+ANCIENT_OFFICIAL := true
 
 BUILD_FINGERPRINT := "google/redfin/redfin:11/RQ3A.210905.001/7511028:user/release-keys"
 
