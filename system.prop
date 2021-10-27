@@ -89,6 +89,7 @@ ro.telephony.default_network=22,22
 telephony.lteOnCdmaDevice=1
 ro.vold.umsdirtyratio=20
 ro.ril.disable.power.collapse=0
+ro.telephony.iwlan_operation_mode=legacy
 
 # WFD
 persist.debug.wfd.enable=1
